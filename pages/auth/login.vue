@@ -34,7 +34,8 @@
 import { useToast } from "vue-toastification";
 
 definePageMeta({
-    layout: false
+    layout: false,
+    middleware: 'guest'
 })
 
 const formData = reactive({
@@ -44,6 +45,7 @@ const formData = reactive({
 const toast = useToast();
 const errors = ref([])
 const loading = ref(false)
+const { authUser } = useAuth();
 
 async function login() {
     if (formData.email === '' || formData.password === '') {
@@ -60,7 +62,10 @@ async function login() {
             body: formData
         });
 
-        console.log(user);
+        authUser.value = user;
+        toast.success("وارد سیستم شدید");
+        return navigateTo('/')
+
     } catch (error) {
         errors.value = Object.values(error.data.data.message).flat()
     } finally {
