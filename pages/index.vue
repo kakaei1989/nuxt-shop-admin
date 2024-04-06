@@ -6,4 +6,11 @@
 definePageMeta({
     middleware: 'auth'
 })
+
+const { data: chartData } = await useFetch('/api/global', {
+    query: { url: '/transactions/chart' },
+    headers: useRequestHeaders(['cookie'])
+})
+
+console.log(chartData.value);
 </script>
