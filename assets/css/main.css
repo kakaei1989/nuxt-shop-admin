@@ -138,6 +138,11 @@ body {
   cursor: pointer;
 }
 
+.remove-icon-image {
+  top: 5px;
+  right: 15px;
+}
+
 .dir-ltr {
   direction: ltr;
 }
