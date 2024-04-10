@@ -21,9 +21,7 @@
         </div>
     </div>
 
-    <button class="btn btn-dark mt-5">
-        حذف
-    </button>
+    <UserDelete :userId="user.id" />
 </template>
 
 <script setup>
