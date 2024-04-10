@@ -24,6 +24,10 @@
 </template>
 
 <script setup>
+definePageMeta({
+    middleware: 'auth'
+})
+
 const page = ref(0);
 
 const { data, refresh } = await useFetch(() => '/api/global', {
