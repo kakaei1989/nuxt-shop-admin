@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     },
 
     css: ["~/assets/css/main.css"],
-
+    modules:['@formkit/nuxt'],
     build: {
         transpile: ["vue-toastification"],
     },
