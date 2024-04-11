@@ -1,5 +1,5 @@
 <template>
-    <div class="col-md-12 mb-5">
+    <div class="col-md-12 mb-2">
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div v-if="image" class="position-relative">
