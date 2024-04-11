@@ -16,6 +16,7 @@
     "nuxt": "^3.11.2",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0",
-    "vue-toastification": "^2.0.0-rc.5"
+    "vue-toastification": "^2.0.0-rc.5",
+    "vue3-persian-datetime-picker": "^1.2.2"
   }
 }

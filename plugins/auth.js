@@ -1,5 +1,4 @@
 export default defineNuxtPlugin(async (nuxtApp) => {
-    console.log("auth.js plugin")
     const { authUser } = useAuth();
 
     try {
