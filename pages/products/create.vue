@@ -105,7 +105,7 @@
 </template>
 
 <script setup>
-import {useToast} from "vue-toastification";
+import { useToast } from "vue-toastification";
 
 definePageMeta({
     middleware: 'auth'
@@ -130,6 +130,11 @@ function imagesFile(el) {
 }
 
 async function create(data) {
+    if (!primaryImage.value) {
+        toast.error("فیلد تصویر اصلی الزامیست");
+        return;
+    }
+
     const formData = new FormData();
 
     for (let index = 0; index < images.value.length; index++) {
@@ -147,8 +152,6 @@ async function create(data) {
     formData.append("date_on_sale_to", saleDateTo.value);
     formData.append("description", data.description);
 
-
-
     try {
         loading.value = true;
         errors.value = [];
@@ -156,7 +159,6 @@ async function create(data) {
         await $fetch('/api/products/create', {
             method: 'POST',
             body: formData,
-            query: { url: '/products' },
         });
 
         toast.success("ایجاد محصول باموفقیت انجام شد");
