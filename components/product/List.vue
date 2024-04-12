@@ -26,7 +26,7 @@
                         <div class="d-flex">
                             <NuxtLink :to="`/products/${product.id}`" class="btn btn-sm btn-outline-dark me-2">نمایش
                             </NuxtLink>
-                            <a class="btn btn-sm btn-dark">ویرایش</a>
+                            <NuxtLink :to="`/products/edit/${product.id}`" class="btn btn-sm btn-dark">ویرایش</NuxtLink>
                         </div>
                     </td>
                 </tr>
