@@ -24,8 +24,8 @@
                     <td>{{ product.status }}</td>
                     <td>
                         <div class="d-flex">
-                            <a class="btn btn-sm btn-outline-dark me-2">نمایش
-                            </a>
+                            <NuxtLink :to="`/products/${product.id}`" class="btn btn-sm btn-outline-dark me-2">نمایش
+                            </NuxtLink>
                             <a class="btn btn-sm btn-dark">ویرایش</a>
                         </div>
                     </td>
