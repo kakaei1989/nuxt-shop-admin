@@ -19,7 +19,7 @@ async function deleteCategory() {
 
         await $fetch('/api/global', {
             method: 'DELETE',
-            query: { url: `/categories/${props.userId}` },
+            query: { url: `/categories/${props.categoryId}` },
         })
 
         toast.warning("حذف دسته بندی باموفقیت انجام شد");
