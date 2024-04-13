@@ -13,7 +13,7 @@ const props = defineProps(['couponId']);
 const loading = ref(false);
 const toast = useToast();
 
-async function coupon() {
+async function couponUser() {
     try {
         loading.value = true;
 
